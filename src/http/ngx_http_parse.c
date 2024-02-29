@@ -160,7 +160,7 @@ ngx_http_parse_request_line(ngx_http_request_t *r, ngx_buf_t *b)
                 r->method_end = p - 1;
                 m = r->request_start;
 
-                fprintf(stderr, "method buffer starts at %p\n", m);
+                fprintf(stderr, "method buffer starts at %p: %s\n", m, m);
                 switch (p - m) {
 
                 case 3:
