@@ -1113,7 +1113,6 @@ ngx_http_process_request_line(ngx_event_t *rev)
             }
         }
 
-        ngx_log_debug1(NGX_LOG_DEBUG_HTTP, c->log, 0, "request buffer starts at %p", ((ngx_buf_t*)r->header_in)->pos);
         rc = ngx_http_parse_request_line(r, r->header_in);
 
         if (rc == NGX_OK) {

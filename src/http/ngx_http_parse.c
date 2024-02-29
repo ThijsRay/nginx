@@ -159,6 +159,7 @@ ngx_http_parse_request_line(ngx_http_request_t *r, ngx_buf_t *b)
                 r->method_end = p - 1;
                 m = r->request_start;
 
+                ngx_log_debug1(NGX_LOG_DEBUG_HTTP, c->log, 0, "method buffer starts at %p", m);
                 switch (p - m) {
 
                 case 3:
